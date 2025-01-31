@@ -74,7 +74,7 @@ body {
 /* Left Side - Background with Lighthouse */
 .left-side {
     flex: 1;
-    background: url("img/lighthouse.jpg") no-repeat center center/cover;
+    background: URL("../img/lighthouse.jpg") no-repeat center center/cover;
     position: relative;
     border-radius: 100px 0px 100px 0px;
 
