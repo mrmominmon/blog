@@ -220,7 +220,7 @@ body {
 .hero-section {
     margin-top: 60px;
     position: relative;
-    background: url("/img/farm.jpg"); /* Replace 'farm.jpg' with your background image */
+    background: URL("../img/farm.jpg"); /* Replace 'farm.jpg' with your background image */
     background-size: cover;
     background-position: center;
     height: 80vh;
