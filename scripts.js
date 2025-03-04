@@ -1,3 +1,41 @@
+// Disable right-click
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    alert('! Content is Projected.');
+});
+
+// Disable text selection
+document.addEventListener('selectstart', event => event.preventDefault());
+
+// Disable copying
+document.addEventListener('copy', event => event.preventDefault());
+
+// Disable developer tools (Inspect Element)
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && (event.key === 'u' || event.key === 'U')) {
+        event.preventDefault();
+        alert('Viewing source code is disabled.');
+    }
+    if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i')) {
+        event.preventDefault();
+        alert('Developer tools are disabled.');
+    }
+    if (event.key === 'F12') {
+        event.preventDefault();
+        alert('Developer tools are disabled.');
+    }
+});
+
+// Disable image downloading
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', event => event.preventDefault());
+    img.style.pointerEvents = 'none';
+});
+
+
+
+
+
 // Back  to Top button
 document.addEventListener("DOMContentLoaded", function () {
     const backToTop = document.getElementById("backToTop");
